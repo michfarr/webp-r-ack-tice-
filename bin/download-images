@@ -1,0 +1,34 @@
+#!/bin/bash
+
+png_urls=( 'https://github.com/Codaisseur/taste-of-code-samples/raw/master/crosshair-hot.png' \
+ 'https://github.com/Codaisseur/taste-of-code-samples/raw/master/crosshair.png' )
+
+favicon_urls=( 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon.ico' \
+ 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-16x16.png' \
+ 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-32x32.png' \
+ 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-96x96.png' )
+
+if ! [ -d ./src/assets/static ]; then
+  mkdir -p src/assets/static
+  echo "Dir created: ./src/assets/static \n\n"
+fi
+
+for i in "${png_urls[@]}"
+do
+  wget $i
+  sleep 1
+  echo "Download complete. \n"
+done
+
+mv *?.png ./src/assets
+echo ".png images moved to ./src/assets \n\n"
+
+for i in "${favicon_urls[@]}"
+do
+  wget $i
+  sleep 1
+  echo "Download complete. \n"
+done
+
+mv favicon* ./src/assets/static
+echo "favicon images moved to ./src/assets/static \n\n"

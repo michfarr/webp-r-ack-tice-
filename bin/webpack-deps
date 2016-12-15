@@ -1,0 +1,16 @@
+npm install --save \
+  babel-loader \
+  cross-env \
+  css-loader \
+  eventsource-polyfill \
+  exports-loader \
+  express \
+  file-loader \
+  imports-loader \
+  json-loader \
+  rimraf \
+  sass-loader \
+  style-loader \
+  webpack \
+  webpack-dev-middleware \
+  webpack-hot-middleware

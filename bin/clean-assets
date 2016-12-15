@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf ./src/assets
+
+echo "Assets cleaned"

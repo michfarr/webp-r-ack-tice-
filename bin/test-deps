@@ -1,0 +1,14 @@
+#!/bin/bash
+
+npm install --save \
+  babel-eslint \
+  chai \
+  chai-spies \
+  deep-freeze-node \
+  eslint \
+  eslint-plugin-babel \
+  ignore-styles \
+  mocha \
+  mocha-eslint \
+  jsdom \
+  watchify

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+deps=( 'syntax-deps' \
+ 'test-deps' \
+ 'webpack-deps' )
+
+ for i in "${deps[@]}"
+ do
+   ./bin/"$i"
+   sleep 1
+ done
+
+ touch './src/index.js'
+
+ echo "Dependencies installed!"
