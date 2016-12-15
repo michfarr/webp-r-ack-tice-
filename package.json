@@ -1,0 +1,25 @@
+{
+  "name": "tasteofcode-webpack",
+  "version": "1.0.0",
+  "description": "Modern JS version of the Balloon game for the Taste of Code with Webpack.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michfarr/tasteofcode-webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "tasteofcode",
+    "game",
+    "balloons"
+  ],
+  "author": "Mike Farrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michfarr/tasteofcode-webpack/issues"
+  },
+  "homepage": "https://github.com/michfarr/tasteofcode-webpack#readme"
+}
