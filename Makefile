@@ -1,10 +1,10 @@
-all: assets dependencies
+all: clean assets dependencies
 
 assets:
 	bin/download-assets
 
-dependencies:
-	bin/install-dependencies
-
 clean:
 	bin/clean-project
+
+dependencies:
+	bin/install-dependencies
