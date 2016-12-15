@@ -1,11 +1,10 @@
-all: download-assets install-deps
+all: get-assets install-deps
 
-download-assets:
-	bin/download-images
+get-assets:
+	bin/download-files
 
 install-deps:
-	bin/install-deps
+	bin/install-dependencies
 
 clean:
-	bin/clean-assets
-	bin/clean-packages
+	bin/clean-project

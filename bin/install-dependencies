@@ -1,0 +1,22 @@
+#!/bin/bash
+
+dependencies_path='./bin/dependencies'
+deps=( 'syntax' \
+       'test' \
+       'webpack' )
+
+echo """
+===== ===== ===== ===== ===== ===== ===== =====
+
+                  DEPENDENCIES
+
+===== ===== ===== ===== ===== ===== ===== =====
+"""
+
+ for i in "${deps[@]}"
+ do
+   "$dependencies_path"/"$i"
+   sleep 1
+ done
+
+ echo "Dependencies installed!"

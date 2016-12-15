@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo """
+----- ----- ----- ----- -----
+            test
+----- ----- ----- ----- -----
+"""
+
 npm install --save \
   babel-eslint \
   chai \

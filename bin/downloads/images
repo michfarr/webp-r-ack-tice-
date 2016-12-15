@@ -1,5 +1,7 @@
 #!/bin/bash
 
+asset_path='./src/assets'
+
 png_urls=( 'https://github.com/Codaisseur/taste-of-code-samples/raw/master/crosshair-hot.png' \
  'https://github.com/Codaisseur/taste-of-code-samples/raw/master/crosshair.png' )
 
@@ -8,27 +10,35 @@ favicon_urls=( 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon.ico'
  'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-32x32.png' \
  'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-96x96.png' )
 
-if ! [ -d ./src/assets/static ]; then
-  mkdir -p src/assets/static
-  echo "Dir created: ./src/assets/static \n\n"
+echo """
+===== ===== ===== ===== ===== ===== ===== =====
+
+                    IMAGES
+
+===== ===== ===== ===== ===== ===== ===== =====
+"""
+
+if ! [ -d "$asset_path"/static ]; then
+  mkdir -p "$asset_path"/static
+  echo "Dir created: ./src/assets/static"
 fi
 
 for i in "${png_urls[@]}"
 do
   wget $i
-  sleep 1
-  echo "Download complete. \n"
+  echo "Download complete."
 done
 
-mv *?.png ./src/assets
-echo ".png images moved to ./src/assets \n\n"
+mv *?.png $asset_path
+echo ".png images moved to ./src/assets"
+sleep 1
 
 for i in "${favicon_urls[@]}"
 do
   wget $i
-  sleep 1
-  echo "Download complete. \n"
+  echo "Download complete."
 done
 
-mv favicon* ./src/assets/static
-echo "favicon images moved to ./src/assets/static \n\n"
+mv favicon* "$asset_path"/static
+echo "favicon images moved to ./src/assets/static"
+sleep 1

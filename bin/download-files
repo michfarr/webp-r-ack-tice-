@@ -1,0 +1,10 @@
+#!/bin/bash
+
+download_path='./bin/downloads'
+scripts=( 'audio' \
+          'images' )
+
+for i in "${scripts[@]}"
+do
+  "$download_path"/"$i"
+done

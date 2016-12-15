@@ -1,3 +1,11 @@
+#!/bin/bash
+
+echo """
+----- ----- ----- ----- -----
+           webpack
+----- ----- ----- ----- -----
+"""
+
 npm install --save \
   babel-loader \
   cross-env \

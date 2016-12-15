@@ -1,0 +1,21 @@
+#!/bin/bash
+
+asset_path='./src/assets'
+
+audio=( 'https://raw.githubusercontent.com/Codaisseur/taste-of-code-samples/master/balloon-pop.mp3' )
+
+echo """
+===== ===== ===== ===== ===== ===== ===== =====
+
+                     AUDIO
+
+===== ===== ===== ===== ===== ===== ===== =====
+"""
+
+for i in "${audio[@]}"
+do
+  wget $i
+  sleep 1
+done
+
+mv *?.mp3 $asset_path

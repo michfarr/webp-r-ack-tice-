@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo """
+----- ----- ----- ----- -----
+           syntax
+----- ----- ----- ----- -----
+"""
 npm install --save \
   jquery \
   babel-core \

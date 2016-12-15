@@ -1,0 +1,10 @@
+#!/bin/bash
+
+clean_path='./bin/clean'
+scripts=( 'assets' \
+          'packages' )
+
+for i in "${scripts[@]}"
+do
+  "$clean_path"/"$i"
+done
