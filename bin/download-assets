@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Insure the asset path is available for downloads
+if ! [ -d ./src/assets/static ]; then
+  mkdir -p ./src/assets/static
+fi
+
+download_path='./bin/downloads'
+scripts=( 'images' \
+          'audio' )
+
+echo """
+===== ===== ===== ===== ===== ===== ===== =====
+
+                     ASSETS
+
+===== ===== ===== ===== ===== ===== ===== =====
+"""
+
+for i in "${scripts[@]}"
+do
+  "$download_path"/"$i"
+done

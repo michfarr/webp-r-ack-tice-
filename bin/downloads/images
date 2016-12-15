@@ -11,34 +11,21 @@ favicon_urls=( 'https://s3.eu-central-1.amazonaws.com/course-assets/favicon.ico'
  'https://s3.eu-central-1.amazonaws.com/course-assets/favicon-96x96.png' )
 
 echo """
-===== ===== ===== ===== ===== ===== ===== =====
-
-                    IMAGES
-
-===== ===== ===== ===== ===== ===== ===== =====
+----- ----- ----- ----- -----
+            images
+----- ----- ----- ----- -----
 """
-
-if ! [ -d "$asset_path"/static ]; then
-  mkdir -p "$asset_path"/static
-  echo "Dir created: ./src/assets/static"
-fi
 
 for i in "${png_urls[@]}"
 do
   wget $i
-  echo "Download complete."
 done
 
 mv *?.png $asset_path
-echo ".png images moved to ./src/assets"
-sleep 1
 
 for i in "${favicon_urls[@]}"
 do
   wget $i
-  echo "Download complete."
 done
 
 mv favicon* "$asset_path"/static
-echo "favicon images moved to ./src/assets/static"
-sleep 1

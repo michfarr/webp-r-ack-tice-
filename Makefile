@@ -1,9 +1,9 @@
-all: get-assets install-deps
+all: assets dependencies
 
-get-assets:
-	bin/download-files
+assets:
+	bin/download-assets
 
-install-deps:
+dependencies:
 	bin/install-dependencies
 
 clean:

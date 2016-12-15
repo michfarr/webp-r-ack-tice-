@@ -18,5 +18,3 @@ echo """
    "$dependencies_path"/"$i"
    sleep 1
  done
-
- echo "Dependencies installed!"
